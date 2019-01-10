@@ -1,0 +1,12 @@
+  <div class="row">
+    <%= form_for @tweet, html: {class: "col s12"} do |f| %>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.text_area :text, class: "materialize-textarea", id: "textarea1" %>
+          <%= f.label :text, "本文" %>
+          <%= f.submit "送信", class: "btn waves-effect waves-light"  %>
+            <i class="material-icons right"></i>
+        </div>
+      </div>
+    <% end %>
+  </div>

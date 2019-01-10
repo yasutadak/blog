@@ -1,5 +1,17 @@
-<div class="contents row">
-  <% @tweets.each do |tweet| %>
-    <p><%= tweet.text %></p>
-  <% end %>
-</div>
+<% @tweets.each do |tweet| %>
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card white">
+        <div class="card-content black-text">
+          <span class="card-title"></span>
+          <p><%= tweet.text %></p>
+        </div>
+        <div class="card-action">
+          <a class="waves-effect waves-light btn">SHOW</a>
+          <a class="waves-effect waves-light btn">EDIT</a>
+          <a class="waves-effect waves-light btn">DESTROY</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
