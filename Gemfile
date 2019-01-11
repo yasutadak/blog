@@ -53,6 +53,7 @@ end
 gem 'pry-rails'
 gem 'compass-rails','3.1.0'
 gem 'sprockets', '3.7.2'
+gem 'kaminari'
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
