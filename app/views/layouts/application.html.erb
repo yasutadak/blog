@@ -23,7 +23,7 @@
   <body>
     <nav class="light-green accent-3">
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">BLOG</a>
+        <a href="/tweets" class="brand-logo">BLOG</a>
         <% if user_signed_in? %>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
@@ -32,7 +32,7 @@
         <% else %>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><%= link_to "Login", new_user_session_path %></li>
-            <li><%= link_to "Signin", new_user_registration_path %></li>
+            <li><%= link_to "Signup", new_user_registration_path %></li>
           </ul>
         <% end %>
       </div>
