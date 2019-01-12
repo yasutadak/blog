@@ -6,11 +6,13 @@
           <span class="card-title"></span>
           <p><%= tweet.text %></p>
         </div>
-        <div class="card-action">
-          <a class="waves-effect waves-light btn">SHOW</a>
-          <a class="waves-effect waves-light btn">EDIT</a>
-          <a class="waves-effect waves-light btn">DESTROY</a>
-        </div>
+        <% if user_signed_in? && current_user.id == tweet.user_id %>
+          <div class="card-action">
+            <a class="waves-effect waves-light btn">SHOW</a>
+            <a class="waves-effect waves-light btn">EDIT</a>
+            <%= link_to 'DELETE', "/tweets/#{tweet.id}", method: :delete, class: "waves-effect waves-light btn" %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
